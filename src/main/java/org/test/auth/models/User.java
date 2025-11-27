@@ -2,9 +2,18 @@ package org.test.auth.models;
 
 
 public class User {
-    String id;
-    String user;
+
+
+    String uid;
     String password;
+    String nickname;
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 
     public String getNickname() {
         return nickname;
@@ -12,24 +21,6 @@ public class User {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-    }
-
-    String nickname;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
     }
 
     public String getPassword() {

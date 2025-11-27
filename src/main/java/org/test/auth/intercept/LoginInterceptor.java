@@ -28,7 +28,13 @@ public class LoginInterceptor implements HandlerInterceptor {
                 "/swagger-resources",
                 "/v2/api-docs",
                 "/favicon.ico",
-                "/login"
+                "/login",
+                "/login.html",
+                "/default.jpg",
+                "/home.html",
+                "/html",
+                "/home",
+                "/"
         };
         //判断本次是否需要处理
         boolean check = check(urls, requestURI);
