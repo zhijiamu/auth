@@ -1,9 +1,9 @@
 package org.test.auth.design.pattern.behavioral.command;
 
-public class SellStock implements Order{
-    private Stock abcStock;
+public class SellStock implements Order {
+    private final Stock abcStock;
 
-    public SellStock(Stock abcStock){
+    public SellStock(Stock abcStock) {
         this.abcStock = abcStock;
     }
 

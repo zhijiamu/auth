@@ -19,6 +19,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             // 登录成功后的操作，例如重定向到主页等
             window.location.href = '/home.html'; // 假设有一个home页面处理登录后的重定向
         }
+        /**const token=data.toke;
+        localStorage.setItem('token', token);
+        const token = localStorage.getItem('token');
+        localStorage.removeItem('token');
+        localStorage.clear(); // 清除所有
+        **/
     })
     .catch(error => {
         console.error('Error:', error);

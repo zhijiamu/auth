@@ -1,5 +1,5 @@
 package org.test.auth.design.pattern.structural.bridge;
 
-public interface  DrawAPI {
-    public void drawCircle(int radius, int x, int y);
+public interface DrawAPI {
+    void drawCircle(int radius, int x, int y);
 }

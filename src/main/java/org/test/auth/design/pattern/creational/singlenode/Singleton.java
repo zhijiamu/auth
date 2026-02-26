@@ -2,9 +2,11 @@ package org.test.auth.design.pattern.creational.singlenode;
 
 public class Singleton {
     private static Singleton instance;
-    private Singleton (){}
 
-    public static synchronized  Singleton getInstance() {
+    private Singleton() {
+    }
+
+    public static synchronized Singleton getInstance() {
         if (instance == null) {
             instance = new Singleton();
         }
@@ -22,11 +24,11 @@ public class Singleton {
         return instance;
     }
 
-    private static class SingletonHolder {
-        private static final Singleton INSTANCE = new Singleton();
-    }
-
     public static final Singleton getInstancestatic() {
         return SingletonHolder.INSTANCE;
+    }
+
+    private static class SingletonHolder {
+        private static final Singleton INSTANCE = new Singleton();
     }
 }

@@ -1,11 +1,11 @@
 package org.test.auth.design.pattern.structural.filter.selectfilters;
 
 public class Person {
-    private String name;
-    private String gender;
-    private String maritalStatus;
+    private final String name;
+    private final String gender;
+    private final String maritalStatus;
 
-    public Person(String name,String gender,String maritalStatus){
+    public Person(String name, String gender, String maritalStatus) {
         this.name = name;
         this.gender = gender;
         this.maritalStatus = maritalStatus;
@@ -14,9 +14,11 @@ public class Person {
     public String getName() {
         return name;
     }
+
     public String getGender() {
         return gender;
     }
+
     public String getMaritalStatus() {
         return maritalStatus;
     }

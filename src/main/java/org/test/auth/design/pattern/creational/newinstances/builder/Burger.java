@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.creational.newinstances.builder;
 
-public abstract  class Burger implements Item{
+public abstract class Burger implements Item {
 
     @Override
     public Packing packing() {

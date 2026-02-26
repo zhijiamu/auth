@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.creational.newinstances.builder;
 
-public class VegBurger extends Burger{
+public class VegBurger extends Burger {
     @Override
     public float price() {
         return 25.0f;

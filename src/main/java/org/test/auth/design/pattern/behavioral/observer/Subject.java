@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
-    private List<Observer> observers
+    private final List<Observer> observers
             = new ArrayList<Observer>();
     private int state;
 
@@ -17,11 +17,11 @@ public class Subject {
         notifyAllObservers();
     }
 
-    public void attach(Observer observer){
+    public void attach(Observer observer) {
         observers.add(observer);
     }
 
-    public void notifyAllObservers(){
+    public void notifyAllObservers() {
         for (Observer observer : observers) {
             observer.update();
         }

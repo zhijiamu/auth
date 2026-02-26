@@ -2,7 +2,7 @@ package org.test.auth.design.pattern.behavioral.chain;
 
 public class ErrorLogger extends AbstractLogger {
 
-    public ErrorLogger(int level){
+    public ErrorLogger(int level) {
         this.level = level;
     }
 

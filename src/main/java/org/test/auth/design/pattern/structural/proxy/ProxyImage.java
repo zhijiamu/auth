@@ -1,17 +1,17 @@
 package org.test.auth.design.pattern.structural.proxy;
 
-public class ProxyImage  implements Image {
+public class ProxyImage implements Image {
 
     private RealImage realImage;
-    private String fileName;
+    private final String fileName;
 
-    public ProxyImage(String fileName){
+    public ProxyImage(String fileName) {
         this.fileName = fileName;
     }
 
     @Override
     public void display() {
-        if(realImage == null){
+        if (realImage == null) {
             realImage = new RealImage(fileName);
         }
         realImage.display();

@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.structural.business;
 
-public class JMSService implements BusinessService{
+public class JMSService implements BusinessService {
     @Override
     public void doProcessing() {
         System.out.println("Processing task by invoking JMS Service");

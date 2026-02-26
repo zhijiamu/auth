@@ -1,7 +1,9 @@
 package org.test.auth.design.pattern.structural.bridge;
 
-public class Circle extends Shape{
-    private int x, y, radius;
+public class Circle extends Shape {
+    private final int x;
+    private final int y;
+    private final int radius;
 
     public Circle(int x, int y, int radius, DrawAPI drawAPI) {
         super(drawAPI);
@@ -11,6 +13,6 @@ public class Circle extends Shape{
     }
 
     public void draw() {
-        drawAPI.drawCircle(radius,x,y);
+        drawAPI.drawCircle(radius, x, y);
     }
 }

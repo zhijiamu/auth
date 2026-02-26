@@ -4,8 +4,8 @@ import java.util.List;
 
 public class OrCriteria implements Criteria {
 
-    private Criteria criteria;
-    private Criteria otherCriteria;
+    private final Criteria criteria;
+    private final Criteria otherCriteria;
 
     public OrCriteria(Criteria criteria, Criteria otherCriteria) {
         this.criteria = criteria;
@@ -18,7 +18,7 @@ public class OrCriteria implements Criteria {
         List<Person> otherCriteriaItems = otherCriteria.meetCriteria(persons);
 
         for (Person person : otherCriteriaItems) {
-            if(!firstCriteriaItems.contains(person)){
+            if (!firstCriteriaItems.contains(person)) {
                 firstCriteriaItems.add(person);
             }
         }

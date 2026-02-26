@@ -1,13 +1,13 @@
 package org.test.auth.design.pattern.structural.flyweight;
 
-public class Circle  implements Shape {
+public class Circle implements Shape {
 
-    private String color;
+    private final String color;
     private int x;
     private int y;
     private int radius;
 
-    public Circle(String color){
+    public Circle(String color) {
         this.color = color;
     }
 
@@ -26,6 +26,6 @@ public class Circle  implements Shape {
     @Override
     public void draw() {
         System.out.println("Circle: Draw() [Color : " + color
-                +", x : " + x +", y :" + y +", radius :" + radius);
+                + ", x : " + x + ", y :" + y + ", radius :" + radius);
     }
 }

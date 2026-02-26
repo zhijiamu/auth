@@ -1,13 +1,13 @@
 package org.test.auth.design.pattern.structural.decorate;
 
-public class ShapeDecorator implements Shape{
+public class ShapeDecorator implements Shape {
     protected Shape decoratedShape;
 
-    public ShapeDecorator(Shape decoratedShape){
+    public ShapeDecorator(Shape decoratedShape) {
         this.decoratedShape = decoratedShape;
     }
 
-    public void draw(){
+    public void draw() {
         decoratedShape.draw();
     }
 }

@@ -1,12 +1,13 @@
 package org.test.auth.design.pattern.j2ee.composite;
 
-public class CompositeEntity {  private CoarseGrainedObject cgo = new CoarseGrainedObject();
+public class CompositeEntity {
+    private final CoarseGrainedObject cgo = new CoarseGrainedObject();
 
-    public void setData(String data1, String data2){
+    public void setData(String data1, String data2) {
         cgo.setData(data1, data2);
     }
 
-    public String[] getData(){
+    public String[] getData() {
         return cgo.getData();
     }
 }

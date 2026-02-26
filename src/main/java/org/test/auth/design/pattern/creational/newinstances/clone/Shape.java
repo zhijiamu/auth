@@ -1,12 +1,12 @@
 package org.test.auth.design.pattern.creational.newinstances.clone;
 
-public abstract  class Shape implements Cloneable {
-    private String id;
+public abstract class Shape implements Cloneable {
     protected String type;
+    private String id;
 
     abstract void draw();
 
-    public String getType(){
+    public String getType() {
         return type;
     }
 

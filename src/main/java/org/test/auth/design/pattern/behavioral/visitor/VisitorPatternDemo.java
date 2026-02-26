@@ -9,7 +9,7 @@ public class VisitorPatternDemo {
         ComputerPart computer = new Computer();
         computer.accept(new ComputerPartDisplayVisitor());
 
-        Keyboard keyboard=new Keyboard();
+        Keyboard keyboard = new Keyboard();
         keyboard.accept(new ComputerPartDisplayVisitor());
     }
 }

@@ -8,22 +8,24 @@ import org.test.auth.models.User;
 
 import java.util.HashMap;
 import java.util.Map;
+
 @Service
 public class LoginService {
 
     @Autowired
     HttpServletResponse httpServletResponse;
+
     public Map login(String username, String password) {
         //登录业务流程
-        User user=new User();
+        User user = new User();
         Map map = new HashMap<>();
         user.setNickname(username);
         user.setUid("23043443");
-      if(username.equals("muhaiyan")) {
-          String token = JwtUtils.getToken(user.getUid(), user.getNickname());
-          map.put("token", token);
-          httpServletResponse.addHeader("Authorization",token);
-      }
+        if (username.equals("muhaiyan")) {
+            String token = JwtUtils.getToken(user.getUid(), user.getNickname());
+            map.put("token", token);
+            httpServletResponse.addHeader("Authorization", token);
+        }
         map.put("user", user);
 
         return map;

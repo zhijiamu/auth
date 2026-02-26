@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.creational.newinstances.builder;
 
-public abstract class ColdDrink implements Item{
+public abstract class ColdDrink implements Item {
     @Override
     public Packing packing() {
         return new Bottle();

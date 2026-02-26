@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.creational.newinstances.builder;
 
-public class Pepsi extends ColdDrink{
+public class Pepsi extends ColdDrink {
     @Override
     public float price() {
         return 35.0f;

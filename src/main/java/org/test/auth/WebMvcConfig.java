@@ -6,17 +6,28 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.test.auth.intercept.LoginInterceptor;
+import org.test.auth.intercept.UrlToHomeInterceptor;
 
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private LoginInterceptor loginInterceptor;
+    @Autowired
+    private UrlToHomeInterceptor urlToHomeInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(urlToHomeInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/html/**")
+                .excludePathPatterns("/js/**");
+        //拦截所以路径
+
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/html/**")
-                .excludePathPatterns("/js/**");;//拦截所以路径
+                .excludePathPatterns("/js/**");
+        //拦截所以路径
     }
 
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -25,4 +36,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/hello").setViewName("hello");
         registry.addViewController("/login").setViewName("login");
     }
+
+
 }

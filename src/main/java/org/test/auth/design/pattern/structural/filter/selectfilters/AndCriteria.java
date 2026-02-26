@@ -3,8 +3,8 @@ package org.test.auth.design.pattern.structural.filter.selectfilters;
 import java.util.List;
 
 public class AndCriteria implements Criteria {
-    private Criteria criteria;
-    private Criteria otherCriteria;
+    private final Criteria criteria;
+    private final Criteria otherCriteria;
 
     public AndCriteria(Criteria criteria, Criteria otherCriteria) {
         this.criteria = criteria;

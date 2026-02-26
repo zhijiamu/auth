@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.behavioral.nullobject;
 
-public class NullCustomer extends AbstractCustomer{
+public class NullCustomer extends AbstractCustomer {
     @Override
     public String getName() {
         return "Not Available in Customer Database";

@@ -1,6 +1,6 @@
 package org.test.auth.design.pattern.behavioral.nullobject;
 
-public class RealCustomer extends AbstractCustomer{
+public class RealCustomer extends AbstractCustomer {
     public RealCustomer(String name) {
         this.name = name;
     }

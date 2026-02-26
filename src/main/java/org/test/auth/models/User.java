@@ -7,6 +7,7 @@ public class User {
     String uid;
     String password;
     String nickname;
+
     public String getUid() {
         return uid;
     }

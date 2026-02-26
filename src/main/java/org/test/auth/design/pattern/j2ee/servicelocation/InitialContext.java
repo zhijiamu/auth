@@ -1,11 +1,11 @@
 package org.test.auth.design.pattern.j2ee.servicelocation;
 
 public class InitialContext {
-    public Object lookup(String jndiName){
-        if(jndiName.equalsIgnoreCase("SERVICE1")){
+    public Object lookup(String jndiName) {
+        if (jndiName.equalsIgnoreCase("SERVICE1")) {
             System.out.println("Looking up and creating a new Service1 object");
             return new Service1();
-        }else if (jndiName.equalsIgnoreCase("SERVICE2")){
+        } else if (jndiName.equalsIgnoreCase("SERVICE2")) {
             System.out.println("Looking up and creating a new Service2 object");
             return new Service2();
         }
